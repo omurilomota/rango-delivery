@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #17352b;
+  --forest: #173f32;
+  --forest-dark: #0f2f25;
+  --leaf: #287154;
+  --coral: #f45d3d;
+  --coral-dark: #d9482d;
+  --sun: #f1c85b;
+  --cream: #f7f1e7;
+  --paper: #fffdf8;
+  --muted: #687970;
+  --line: #dedfd7;
+}
+
+/* Layout guards for small screens. Declared in @layer base so Tailwind
+   utilities (grid-cols-*, min-w-*, etc.) still win when they are set. */
+@layer base {
+  /* Icons must never be squeezed by flex or grid containers. */
+  svg {
+    flex-shrink: 0;
+  }
+
+  /* Single-column grids should not grow to fit their widest child. */
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  /* Grid and flex children may shrink below their min-content width. */
+  .grid > *,
+  .flex > * {
+    min-width: 0;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  text-rendering: optimizeLegibility;
+  overflow-wrap: break-word;
+}
+button, input, select, textarea { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button { cursor: pointer; }
+::selection { background: #f1c85b; color: #17352b; }
+
+.display-font {
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: -0.035em;
+}
+
+.shell { width: min(1180px, calc(100% - 40px)); margin-inline: auto; }
+.hide-scrollbar { scrollbar-width: none; }
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+
+.food-image { transition: transform 500ms cubic-bezier(.2,.7,.2,1); }
+.group:hover .food-image { transform: scale(1.045); }
+
+.soft-shadow { box-shadow: 0 18px 50px rgba(23, 53, 43, 0.10); }
+.strong-shadow { box-shadow: 0 24px 70px rgba(15, 47, 37, 0.24); }
+
+.dot-pattern {
+  background-color: #f0eadf;
+  background-image: none;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(22px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes pulseRing {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(40, 113, 84, .35); }
+  50% { box-shadow: 0 0 0 7px rgba(40, 113, 84, 0); }
+}
+.animate-rise { animation: rise .45s ease both; }
+.animate-slide-in { animation: slideIn .35s ease both; }
+.status-pulse { animation: pulseRing 2s infinite; }
+
+:focus-visible { outline: 3px solid rgba(244, 93, 61, .35); outline-offset: 3px; }
+
+@media (max-width: 767px) {
+  .shell { width: min(100% - 32px, 1180px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}

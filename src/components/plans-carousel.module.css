@@ -1,0 +1,52 @@
+.track {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 0.875rem;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin-top: 0.75rem;
+  padding: 0.25rem 0 1rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  scroll-padding-inline: 0;
+  touch-action: pan-x pan-y pinch-zoom;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #287154 #dedfd7;
+}
+
+.track::-webkit-scrollbar {
+  height: 8px;
+}
+
+.track::-webkit-scrollbar-track {
+  background: #dedfd7;
+  border-radius: 999px;
+}
+
+.track::-webkit-scrollbar-thumb {
+  background: #287154;
+  border-radius: 999px;
+}
+
+.card {
+  flex: 0 0 86%;
+  min-width: 0;
+  scroll-snap-align: start;
+}
+
+@media (min-width: 640px) {
+  .card {
+    flex-basis: 54%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    flex-basis: 38%;
+  }
+}
