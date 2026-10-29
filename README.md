@@ -4,7 +4,7 @@ Delivery, clube de refeições e painel do restaurante.
 
 > **Demonstração pública.** Telefones, WhatsApp, e-mail, endereço, CNPJ, redes sociais e dados de clientes são fictícios. Nenhum pedido, mensagem ou formulário é enviado a um canal real.
 
-[**Ver demonstração**](https://rango-delivery.vercel.app) · Next.js 16 (App Router) · React 19 · TypeScript · PostgreSQL + Drizzle ORM · Tailwind CSS 4
+[**Ver demonstração**](https://rango-delivery-muriloinc.vercel.app) · Next.js 16 (App Router) · React 19 · TypeScript · PostgreSQL + Drizzle ORM · Tailwind CSS 4
 
 ## O que tem
 
