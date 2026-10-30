@@ -598,6 +598,17 @@ export function Storefront() {
             <a href="/admin">Painel</a>
           </div>
           <p className="mt-7 text-[11px] text-white/35">© 2026 Rango Restaurante e Petiscaria · Junqueirópolis/SP</p>
+          <p className="mt-1 text-[10px] text-white/20">
+            <a
+              href="https://wa.me/5518998133524"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Falar com Murilo Mota no WhatsApp"
+              className="transition-colors hover:text-[#f1c85b]"
+            >
+              Desenvolvido por Murilo Mota · 55 (18) 99813-3524
+            </a>
+          </p>
         </div>
       </footer>
 
@@ -764,7 +775,7 @@ export function Storefront() {
                         else setCheckoutStage("payment");
                       }
                     }}
-                    className="flex h-13 items-center justify-center gap-2 rounded-full bg-[#f45d3d] font-bold text-white disabled:opacity-60"
+                    className={`flex h-13 items-center justify-center gap-2 rounded-full bg-[#f45d3d] font-bold text-white disabled:opacity-60 ${checkoutStage === "cart" ? "col-span-2" : ""}`}
                   >
                     {submitting ? "Enviando..." : checkoutStage === "payment" ? "Confirmar pedido" : "Continuar"} {!submitting && <ArrowRight size={17} />}
                   </button>
