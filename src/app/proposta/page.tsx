@@ -44,7 +44,7 @@ export default function ProposalPage() {
 
         <section className="bg-[#f45d3d] py-16 text-white"><div className="shell flex flex-col justify-between gap-8 lg:flex-row lg:items-center"><div><p className="text-xs font-black uppercase tracking-[.16em] text-[#f1c85b]">Próximo passo</p><h2 className="display-font mt-3 text-5xl font-bold">Vamos colocar o Rango no ar?</h2><p className="mt-3 text-white/70">Uma conversa de 30 minutos para validar operação, taxas e metas do piloto.</p></div><a href="https://wa.me/5518999990109?text=Ol%C3%A1%21%20Quero%20conhecer%20a%20proposta%20do%20Clube%20Rango." target="_blank" rel="noreferrer" className="flex h-14 shrink-0 items-center justify-center gap-2 rounded-full bg-[#173f32] px-8 font-bold">Conversar sobre o piloto <MessageCircle size={19} /></a></div></section>
       </main>
-      <footer className="bg-[#0f2f25] py-7 text-white"><div className="shell flex flex-col justify-between gap-2 text-xs text-white/45 sm:flex-row"><span>Clube Rango · proposta confidencial</span><span>Preparado para Rango Restaurante e Petiscaria</span></div></footer>
+      <footer className="bg-[#0f2f25] py-7 text-white"><div className="shell flex flex-col justify-between gap-2 text-xs text-white/45 sm:flex-row"><span>Clube Rango · proposta confidencial</span><span>Preparado para Rango Restaurante e Petiscaria</span><a href="https://wa.me/5518998133524" target="_blank" rel="noreferrer" aria-label="Falar com Murilo Mota no WhatsApp" className="text-white/25 transition-colors hover:text-[#f1c85b]">Desenvolvido por Murilo Mota · 55 (18) 99813-3524</a></div></footer>
     </div>
   );
 }
